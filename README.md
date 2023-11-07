@@ -41,6 +41,20 @@ async function load(){
 }
 ```
 
+### get list and filter .txt
+```js
+  var api = gapi(url,auth)
+  var res = await api.get()
+  console.log(res)
+  var list = res.map(d=>d.name)
+   .filter(d=>/\.txt/.test(d))
+  ;
+  console.log(list)
+  //["dev.txt","dev1.txt","dev2.txt","dev3.txt","help.txt","test.txt"]
+
+```
+
+
 ### get summary
 ```js
 await api.summary('hogehoge.txt')
