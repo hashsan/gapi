@@ -87,3 +87,29 @@ await api.put('＃データ。これはデータ。データ','hogehoge.txt')
 ```
 
 
+### checkAuth standalone
+```js
+async function checkAuth(token){
+  const url = 'https://api.github.com/user'
+  const accept = "application/vnd.github.v3+json"  
+  const authorization ='token '+ token
+  const method ='GET'
+  const headers = { 
+    accept,
+    authorization
+  }
+  var flg = false
+  await fetch(url,{method,headers})
+    .then(res=>{
+    if(!res.ok) throw new Error('authorization false')
+    flg = true
+  }).catch(e=>{
+    flg =false
+    console.log(e)
+  })
+  //console.log(Config)
+  return flg
+}  
+```
+
+
