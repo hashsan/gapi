@@ -1,7 +1,6 @@
 # gapi
 gapi.js is upload to the github repository
 
-
 ```js
 import "//hashsan.github.io/gapi/gapi.js";
 
@@ -36,3 +35,22 @@ async function load(){
   el.innerHTML=da
 }
 ```
+
+### get summary
+```js
+await api.summary('hogehoge.txt')
+```
+
+### get data
+```js
+await api.data('hogehoge.txt')
+```
+
+### upload file. create or update. both use.
+- first param is data
+- __second param is filename__
+```js
+await api.put('＃データ。これはデータ。データ','hogehoge.txt')
+```
+
+
