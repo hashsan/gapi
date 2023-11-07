@@ -59,6 +59,20 @@ async function load(){
 ```js
 await api.summary('hogehoge.txt')
 ```
+```
+{
+    "name": "test.txt",
+    "sha": "f22739e3a1efd7821576630dee37e346158d8f44",
+    "content": "＃あいうえをこれはテスト",
+    "download_url": "https://raw.githubusercontent.com/hashsan/hnikki/main/test.txt",
+    "date": "2023-11-07T04:53:54Z",
+    "timestamp": 1699332834000,
+    "lines": 0,
+    "title": "＃あいうえをこれはテスト",
+    "time": "2023-11-07 13:53:54",
+    "order": "1699332"
+}
+```
 
 ### get data
 ```js
