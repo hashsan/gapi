@@ -2,6 +2,11 @@
 gapi.js is upload to the github repository
 
 ```js
+var api = gapi(url,ghp)
+//ghp is access token. ex) ghp_xxxxxxxxxxxxxxxxxxxxx
+```
+
+```js
 import "//hashsan.github.io/gapi/gapi.js";
 
 ///
@@ -16,7 +21,7 @@ async function load(){
   
   var url ="https://hashsan.github.io/hnikki"
   var ghp = localStorage.getItem('ghp')
-  var api = gapi(url,ghp)
+  var api = gapi(url,ghp) //<---------------------------------------
   
   //get summary
   var el = document.createElement('pre')
