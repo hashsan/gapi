@@ -113,6 +113,13 @@ console.log(theURL.toString());
     return {url,owner,repo,path}
   }
 
+function timeToOrder(timestamp){
+  var useorder = (''+timestamp).slice(0,-6) 
+  /*10*60*1000*/ /*cut the 15min*/  
+  return useorder
+}
+
+	  
 
   function base(opt){
     opt.t1 = opt.t1||'',opt.t2=opt.t2||'';
@@ -244,11 +251,13 @@ console.log(theURL.toString());
       var lines = (content.match(/\n/g)||[]).length;
       var title = content.split('\n').slice(0,1).join('')
       var time = jpTime(timestamp)
+			var order = timeToOrder(timestamp) ///new
       //
       return {
         name,sha,content,download_url,
         date,timestamp,
-        lines,title,time
+        lines,title,time,
+	      order
       }    
 
     }
